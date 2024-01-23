@@ -9,6 +9,9 @@ import UIKit
 
 class UserViewController: UIViewController {
 
+
+    let userViewModel: UserViewModel
+
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -31,11 +34,19 @@ class UserViewController: UIViewController {
         return label
     }()
 
+    init(userViewModel: UserViewModel) {
+        self.userViewModel = userViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        fetchUser()
+        //fetchUser()
 
         // Do any additional setup after loading the view.
     }
@@ -63,6 +74,7 @@ class UserViewController: UIViewController {
             userLabel.heightAnchor.constraint(equalToConstant: 50)
             ])
     }
+    /*
     func fetchUser() {
         APIManager.shared.fetchUser { result in
             switch result {
@@ -75,6 +87,6 @@ class UserViewController: UIViewController {
             }
         }
     }
-
+*/
 }
 

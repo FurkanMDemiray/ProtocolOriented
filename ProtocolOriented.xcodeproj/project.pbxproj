@@ -17,6 +17,8 @@
 		DD5B7CE62B5ED552000C44C2 /* ProtocolOrientedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5B7CE52B5ED552000C44C2 /* ProtocolOrientedUITestsLaunchTests.swift */; };
 		DD5B7CF72B5EFF8A000C44C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5B7CF62B5EFF8A000C44C2 /* User.swift */; };
 		DD5B7CF92B5EFFB0000C44C2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5B7CF82B5EFFB0000C44C2 /* APIManager.swift */; };
+		DDB34C852B5FD89F0009E006 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB34C842B5FD89F0009E006 /* UserService.swift */; };
+		DDB34C872B5FD95C0009E006 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB34C862B5FD95C0009E006 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		DD5B7CE52B5ED552000C44C2 /* ProtocolOrientedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolOrientedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DD5B7CF62B5EFF8A000C44C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DD5B7CF82B5EFFB0000C44C2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		DDB34C842B5FD89F0009E006 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		DDB34C862B5FD95C0009E006 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				DD5B7CF82B5EFFB0000C44C2 /* APIManager.swift */,
+				DDB34C842B5FD89F0009E006 /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 		DD5B7CF42B5EFF6B000C44C2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DDB34C862B5FD95C0009E006 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -294,8 +300,10 @@
 			files = (
 				DD5B7CF72B5EFF8A000C44C2 /* User.swift in Sources */,
 				DD5B7CC72B5ED547000C44C2 /* UserViewController.swift in Sources */,
+				DDB34C852B5FD89F0009E006 /* UserService.swift in Sources */,
 				DD5B7CF92B5EFFB0000C44C2 /* APIManager.swift in Sources */,
 				DD5B7CC32B5ED547000C44C2 /* AppDelegate.swift in Sources */,
+				DDB34C872B5FD95C0009E006 /* UserViewModel.swift in Sources */,
 				DD5B7CC52B5ED547000C44C2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
