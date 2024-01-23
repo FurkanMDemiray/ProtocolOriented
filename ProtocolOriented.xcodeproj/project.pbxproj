@@ -19,6 +19,7 @@
 		DD5B7CF92B5EFFB0000C44C2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5B7CF82B5EFFB0000C44C2 /* APIManager.swift */; };
 		DDB34C852B5FD89F0009E006 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB34C842B5FD89F0009E006 /* UserService.swift */; };
 		DDB34C872B5FD95C0009E006 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB34C862B5FD95C0009E006 /* UserViewModel.swift */; };
+		DDB34C892B5FDCA90009E006 /* UserViewModelProcotol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB34C882B5FDCA90009E006 /* UserViewModelProcotol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		DD5B7CF82B5EFFB0000C44C2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		DDB34C842B5FD89F0009E006 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DDB34C862B5FD95C0009E006 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		DDB34C882B5FDCA90009E006 /* UserViewModelProcotol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelProcotol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		DD5B7CF42B5EFF6B000C44C2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DDB34C882B5FDCA90009E006 /* UserViewModelProcotol.swift */,
 				DDB34C862B5FD95C0009E006 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
@@ -301,6 +304,7 @@
 				DD5B7CF72B5EFF8A000C44C2 /* User.swift in Sources */,
 				DD5B7CC72B5ED547000C44C2 /* UserViewController.swift in Sources */,
 				DDB34C852B5FD89F0009E006 /* UserService.swift in Sources */,
+				DDB34C892B5FDCA90009E006 /* UserViewModelProcotol.swift in Sources */,
 				DD5B7CF92B5EFFB0000C44C2 /* APIManager.swift in Sources */,
 				DD5B7CC32B5ED547000C44C2 /* AppDelegate.swift in Sources */,
 				DDB34C872B5FD95C0009E006 /* UserViewModel.swift in Sources */,

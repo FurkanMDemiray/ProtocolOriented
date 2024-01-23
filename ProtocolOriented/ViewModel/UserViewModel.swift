@@ -12,19 +12,20 @@ import Foundation
 class UserViewModel {
 
     let userService: UserService
+    weak var output: UserViewModelProcotol?
 
     init(userService: UserService) {
         self.userService = userService
     }
 
 
-    func fetchUser(completion: @escaping (Result<User, Error>) -> Void) {
+    func fetchUser() {
         userService.fetchUser { result in
             switch result {
             case .success(let user):
-                completion(.success(user))
+                self.output?.updateView(name: user.name, email: user.email, userName: user.username)
             case .failure(_):
-                print("Error")
+                self.output?.updateView(name: "Error", email: "Error", userName: "Error")
             }
         }
     }

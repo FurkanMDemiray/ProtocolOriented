@@ -7,8 +7,14 @@
 
 import UIKit
 
-class UserViewController: UIViewController {
+class UserViewController: UIViewController, UserViewModelProcotol {
 
+
+    func updateView(name: String, email: String, userName: String) {
+        nameLabel.text = name
+        emailLabel.text = email
+        userLabel.text = userName
+    }
 
     let userViewModel: UserViewModel
 
@@ -37,6 +43,7 @@ class UserViewController: UIViewController {
     init(userViewModel: UserViewModel) {
         self.userViewModel = userViewModel
         super.init(nibName: nil, bundle: nil)
+        self.userViewModel.output = self
     }
 
     required init?(coder: NSCoder) {
@@ -46,7 +53,7 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        //fetchUser()
+        userViewModel.fetchUser()
 
         // Do any additional setup after loading the view.
     }
