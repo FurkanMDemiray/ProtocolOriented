@@ -10,12 +10,22 @@ import XCTest
 
 final class ProtocolOrientedTests: XCTestCase {
 
+    var userViewModel: UserViewModel!
+    var userService: MockService!
+    var output: MockUserViewModelOutput!
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        userService = MockService()
+        userViewModel = UserViewModel(userService: userService)
+        output = MockUserViewModelOutput()
+        userViewModel.output = output
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        userService = nil
+        userViewModel = nil
     }
 
     func testExample() throws {
@@ -33,4 +43,31 @@ final class ProtocolOrientedTests: XCTestCase {
         }
     }
 
+    func testUpdateView_when_API_Success() throws {
+        // Given
+        let mockUser = User.init(id: 1, name: "Test", username: "Test", email: "Test", address: Address(street: "", suite: "", city: "", zipcode: "", geo: Geo(lat: "", lng: "")), phone: "", website: "", company: Company(name: "", catchPhrase: "", bs: ""))
+        
+        userService.fetchUserMockResult = .success(mockUser)
+        userViewModel.fetchUser()
+        XCTAssertEqual(output.updateArray.first?.name, "Test")
+    }
 }
+
+class MockService: UserService {
+    var fetchUserMockResult: Result<ProtocolOriented.User, Error>?
+    func fetchUser(completion: @escaping (Result<ProtocolOriented.User, Error>) -> Void) {
+        if let result = fetchUserMockResult {
+            completion(result)
+        }
+    }
+}
+
+class MockUserViewModelOutput: UserViewModelProcotol {
+    var updateArray: [(name: String, email: String, userName: String)] = []
+    func updateView(name: String, email: String, userName: String) {
+        updateArray.append((name, email, userName))
+    }
+}
+
+
+
